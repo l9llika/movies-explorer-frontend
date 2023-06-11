@@ -89,8 +89,10 @@
   }
 }
 
-@media screen and (max-width: 1030px) {
-
+@media screen and (max-width: 1060px) {
+  .movie {
+    max-width: 364px;
+  }
   .movie__image {
     height: 151px;
     max-width: 100%;
@@ -101,13 +103,9 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 880px) {
   .movie {
     max-width: 339px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .movie {
     width: 300px;
   }
 }

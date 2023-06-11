@@ -13,6 +13,7 @@
   background: #EBEBEB;
   border-radius: 20px;
   transition: .5s;
+  cursor: pointer;
 }
 
 .checkbox__input:checked {

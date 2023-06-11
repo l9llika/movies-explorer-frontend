@@ -44,26 +44,37 @@
   }
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1060px) {
   .movies__container {
     grid-template-columns: repeat(2, minmax(300px, 1fr));
+    padding: 70px 30px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .movies__container {
     display: grid;
-    padding: 70px 30px;
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
     gap: 30px;
   }
 }
+@media screen and (max-width: 730px) {
+  .movies__container {
+    gap: 16px;
+  }
+}
+
 
 @media screen and (max-width: 700px) {
   .movies__container {
     display: flex;
     flex-direction: column;
-    column-gap: 16px;
   }
 }
+
+@media screen and (max-width: 420px) {
+  .movies__container {
+    padding: 40px 10px;
+  }
+}
+
 

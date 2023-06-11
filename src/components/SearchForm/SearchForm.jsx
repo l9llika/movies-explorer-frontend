@@ -22,7 +22,7 @@ const SearchForm = ({ placeholder, buttonName }) => {
   }
 
   return (
-    <form className="search" onSubmit={handleSubmit} noValidate>
+    <form className="search" onSubmit={handleSubmit}>
       <fieldset className="search-form">
       <img src={searchIcon} alt="Поиск" className="search-icon" />
         <input
@@ -47,6 +47,7 @@ const SearchForm = ({ placeholder, buttonName }) => {
         name="filterShorts"
       />
       </fieldset>
+      <hr className="search__divider-horizontal"/>
     </form>
   )
 }

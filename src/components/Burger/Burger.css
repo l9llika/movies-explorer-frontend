@@ -23,19 +23,19 @@
   }
 }
 
-.burger_active .burger_span:nth-of-type(1) {
+.burger_active .burger-span:nth-of-type(1) {
   transform: translateY(20px) rotate(-45deg);
 }
 
-.burger_active .burger_span:nth-of-type(2) {
+.burger_active .burger-span:nth-of-type(2) {
   display: none;
 }
 
-.burger_active .burger_span:nth-of-type(3) {
+.burger_active .burger-span:nth-of-type(3) {
   transform: translateY(10px) rotate(45deg);
 }
 
-.burger_span {
+.burger-span {
   width: 28px;
   height: 3px;
   background-color: #000;

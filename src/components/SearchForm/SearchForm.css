@@ -48,6 +48,9 @@
   height: 34px;
   border: none;
 }
+.search__button:hover {
+  opacity: .6;
+}
 
 .search__divider {
   background: #E8E8E8;
@@ -87,7 +90,7 @@
   .search {
     padding: 80px 30px 120px;
   }
-  
+
   .search__divider-horizontal {
     width: 92%;
   }

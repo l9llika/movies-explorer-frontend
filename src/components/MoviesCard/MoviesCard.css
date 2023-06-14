@@ -1,28 +1,28 @@
-.movie-card {
+.movies-card {
   display: flex;
   flex-direction: column;
   width: 364px;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
 }
 
-.movie-card__image {
+.movies-card__image {
   width: 100%;
   object-fit: cover;
   height: 168px;
 }
 
-.movie-card__image:hover {
+.movies-card__image:hover {
   cursor: pointer;
   opacity: .6;
 }
 
-.movie-card__container {
+.movies-card__container {
   padding: 14px;
   display: flex;
   justify-content: space-between;
 }
 
-.movie-card__title {
+.movies-card__title {
   margin: 0;
   color: #000;
   font-weight: 500;
@@ -31,7 +31,7 @@
   max-width: 240px;
 }
 
-.movie-card__button {
+.movies-card__button {
   background-image: url(../../images/like-button.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -46,19 +46,19 @@
   align-self: center;
 }
 
-.movie-card__button:hover {
+.movies-card__button:hover {
   opacity: .6;
 }
 
-.movie-card__button_liked {
+.movies-card__button_active {
   background-image: url(../../images/like-button_active.svg);
 }
 
-.movie-card__button_saved {
+.movies-card__button_delete {
   background-image: url(../../images/delete-button.svg);
 }
 
-.movie-card__duration {
+.movies-card__duration {
   padding-top: 9px;
   margin: 0;
   color: #A0A0A0;
@@ -68,43 +68,43 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .movie-card {
+  .movies-card {
     max-width: 300px;
   }
 
-  .movie-card__image {
+  .movies-card__image {
     height: 190px;
     max-width: 100%;
   }
 
-  .movie-card__title {
+  .movies-card__title {
     font-size: 13px;
     line-height: 16px;
     max-width: 295px;
   }
 
-  .movie-card__duration {
+  .movies-card__duration {
     font-size: 11px;
     line-height: 13px;
   }
 }
 
 @media screen and (max-width: 1060px) {
-  .movie-card {
+  .movies-card {
     max-width: 364px;
   }
-  .movie-card__image {
+  .movies-card__image {
     height: 151px;
     max-width: 100%;
   }
 
-  .movie-card__title {
+  .movies-card__title {
     max-width: 226px;
   }
 }
 
 @media screen and (max-width: 880px) {
-  .movie-card {
+  .movies-card {
     max-width: 339px;
     width: 300px;
   }

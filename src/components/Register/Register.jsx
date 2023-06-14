@@ -2,27 +2,15 @@ import { Link } from "react-router-dom";
 import "./Register.css";
 import Logo from "../Logo/Logo";
 import Greeting from "../Greeting/Greeting";
-// import Input from "../Input/Input";
-// import { useState, useEffect } from "react";
-// import { messages, emailRegExp } from "../../utils/config";
 import { useEffect } from "react";
 import { useValidationForm } from "../../utils/hooks/useValidationForm";
 
 const Register = (props) => {
-  // const [email, setEmail] = useState('');
-  // const [password, setPassword] = useState('');
-  // const [name, setName] = useState('');
-  // const [emailDirty, setEmailDirty] = useState(false);
-  // const [passwordDirty, setPasswordDirty] = useState(false);
-  // const [nameDirty, setNameDirty] = useState(false);
-  // const [emailError, setEmailError] = useState(messages.emailInputError);
-  // const [passwordError, setPasswordError] = useState(messages.passwordInputError);
-  // const [nameError, setNameError] = useState(messages.nameInputError);
-  // const [formValid, setFormValid] = useState(false);
   const {values, errors, isValid, handleChange } = useValidationForm();
 
   useEffect(() => {
     props.resetResponseErrors();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function handleSubmit(e) {

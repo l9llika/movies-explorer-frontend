@@ -8,7 +8,7 @@ movies-l9lika.nomoredomains.monster
 
 ## Пул Реквест
 
-()
+https://github.com/l9llika/movies-explorer-frontend/pull/2
 
 ## Макет
 

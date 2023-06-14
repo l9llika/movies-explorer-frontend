@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import React from 'react';
 
 const Movies = (props) => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => props.reset(), [])
 
   function handleClickMoreButton() {

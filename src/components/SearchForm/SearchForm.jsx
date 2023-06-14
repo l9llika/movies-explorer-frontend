@@ -26,14 +26,14 @@ const SearchForm = (props) => {
           required
           value={values.movie || ''}
           onChange={handleChange}
-        />
+        />        
+        <span className="search-form__error">{isValid || "Нужно ввести ключевое слово"}</span>
         <button
           className="search__button"
           type="submit"
           disabled={!isValid}
         >
         </button>
-        <span className="search-form__error">{isValid || "Нужно ввести ключевое слово"}</span>
         <hr className="search__divider"/>
         <FilterCheckbox
           label="Короткометражки"

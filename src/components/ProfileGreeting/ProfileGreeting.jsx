@@ -1,11 +1,11 @@
-import "./ProfileGreeting.css";
+// import "./ProfileGreeting.css";
 
-const ProfileGreeting = () => {
-  return (
-    <section className="profile-greeting">
-      <p className="profile-greeting__title">Привет, Виталий!</p>
-    </section>
-  )
-}
+// const ProfileGreeting = () => {
+//   return (
+//     <section className="profile-greeting">
+//       <p className="profile-greeting__title">Привет, Виталий!</p>
+//     </section>
+//   )
+// }
 
-export default ProfileGreeting
+// export default ProfileGreeting

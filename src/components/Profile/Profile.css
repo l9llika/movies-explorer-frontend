@@ -60,6 +60,21 @@
   text-align: right;
 }
 
+.form-profile__response-message {
+  color: #47A76A;
+}
+
+.form-profile__response-error {
+  display: block;
+  margin-bottom: 8px;
+  height: 32px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #EE3465;
+}
+
+
 .form-profile__button {
   width: 100%;
   padding: 0;

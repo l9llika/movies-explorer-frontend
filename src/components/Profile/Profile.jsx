@@ -8,7 +8,7 @@ const Profile = (props) => {
   const { values, errors, isValid, setValues, setIsValid, handleChange } = useValidationForm();
 
   useEffect(() => {
-    props.resetResponseErrors();
+    props.reset();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -29,7 +29,7 @@ const Profile = (props) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    props.resetResponseErrors();
+    props.reset();
     props.onEditInfo(values);
   }
 
@@ -44,7 +44,7 @@ const Profile = (props) => {
             type="text"
             id="name"
             name="name"
-            pattern="^[A-zА-яё\s-]{2,30}$"
+            pattern="[а-яА-Яёa-zA-Z\s-]{2,30}"
             required
             placeholder="Имя"
             value={values.name || ''}
@@ -59,6 +59,7 @@ const Profile = (props) => {
             type="email"
             id="email"
             name="email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
             required
             placeholder="Email"
             value={values.email || ''}
@@ -67,6 +68,9 @@ const Profile = (props) => {
           <span className="form-profile__error" id="input-error">{errors.email || ""}</span>
         </li>
       </ul>
+      <span className={`form-profile__response-error ${props.responseMessage.message && "form-profile__response-message"}`}>
+        {props.responseMessage.error || props.responseMessage.message}
+      </span>
       {!isValid ?
         <button type="button"
           className="form-profile__button form-profile__button_view_submit form-profile__button_disabled"

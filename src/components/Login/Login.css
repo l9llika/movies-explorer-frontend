@@ -64,6 +64,16 @@
   margin-top: 10px;
 }
 
+.login__form_response-error {
+  display: block;
+  margin-bottom: 10px;
+  height: 32px;
+  color: #EE3465;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+}
+
 .login__form_button {
   background-color: #2BE080;;
   color: #fff;

@@ -9,18 +9,14 @@ const Register = (props) => {
   const {values, errors, isValid, handleChange } = useValidationForm();
 
   useEffect(() => {
-    props.resetResponseErrors();
+    props.reset();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
-    props.resetResponseErrors();
-    if (props.signUp) {
-      props.signUp(values);
-    } else {
-      props.signIn(values.name,values.email, values.password);
-    }
+    props.reset();
+    props.signUp(values);
   }
 
   return (
@@ -41,7 +37,8 @@ const Register = (props) => {
           maxLength="30"
           placeholder="Введите имя"
           id="name"
-          value={values.name}
+          pattern="[а-яА-Яёa-zA-Z\s-]{2,30}"
+          value={values.name || ''}
           onChange={handleChange}
         />
         <span className="register__form_error">{errors.name || ''}</span>
@@ -54,7 +51,8 @@ const Register = (props) => {
           name="email"
           placeholder="Введите email"
           id="email"
-          value={values.email}
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          value={values.email || ''}
           onChange={handleChange}
         />
         <span className="register__form_error">{errors.email || ''}</span>
@@ -68,10 +66,14 @@ const Register = (props) => {
           maxLength="10"
           placeholder="Введите пароль"
           id="password"
-          value={values.password}
+          value={values.password || ''}
           onChange={handleChange}
         />
         <span className="register__form_error">{errors.password || ''}</span>
+        <div className="register__form_container">
+          <span className={`register__form_response-error ${props.responseMessage.message && "register__form_response-message"}`}>
+            {props.responseMessage.error}
+          </span>
         <button
           className="register__form_button"
           disabled={!isValid}
@@ -88,6 +90,7 @@ const Register = (props) => {
             Войти
           </Link>
         </p>
+        </div>
       </form>
     </div>
   )

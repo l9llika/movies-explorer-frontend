@@ -2,11 +2,21 @@ import "./SearchForm.css";
 import searchIcon from "../../images/search.svg";
 import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
 import { useValidationForm } from "../../utils/hooks/useValidationForm";
-import { useState } from "react";
+import { useEffect,useState } from "react";
+import { useRef } from "react";
 
 const SearchForm = (props) => {
   const [isChecked, setIsChecked] = useState(false);
   const { values, isValid, handleChange } = useValidationForm();
+  const inputRef = useRef();
+
+  useEffect(() => setIsChecked(props.isCheckedInitial),
+    [props.isCheckedInitial]
+  )
+
+  useEffect(() => { inputRef.current.dispatchEvent(new Event('change', { bubbles: true })) },
+    [props.searchStringInitial]
+  )
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -14,7 +24,7 @@ const SearchForm = (props) => {
     }
 
   return (
-    <form className="search" onSubmit={(e) => handleSubmit(e)} noValidate>
+    <form className="search" onSubmit={(e) => handleSubmit(e)} >
       <fieldset className="search-form">
       <img src={searchIcon} alt="Поиск" className="search-icon" />
         <input
@@ -24,10 +34,12 @@ const SearchForm = (props) => {
           name="movie"
           minLength="2"
           required
-          value={values.movie || ''}
+          defaultValue={props.searchStringInitial || ''}
           onChange={handleChange}
-        />        
+          ref={inputRef}
+        />
         <span className="search-form__error">{isValid || "Нужно ввести ключевое слово"}</span>
+        <span className={`search-form__response-error`}>{props.responseMessage.error}</span>
         <button
           className="search__button"
           type="submit"
@@ -37,7 +49,8 @@ const SearchForm = (props) => {
         <hr className="search__divider"/>
         <FilterCheckbox
           label="Короткометражки"
-          onChange={setIsChecked}
+          setIsChecked={setIsChecked}
+          isChecked={isChecked}
         />
       </fieldset>
       <hr className="search__divider-horizontal"/>

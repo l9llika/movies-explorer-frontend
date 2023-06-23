@@ -46,6 +46,15 @@
   line-height: 12px;
 }
 
+.search-form__response-error {
+  display: block;
+  height: 32px;
+  color: #EE3465;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+}
+
 .search-icon {
   height: 10px;
   width: 15px;

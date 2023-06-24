@@ -1,0 +1,155 @@
+.search {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 10px 44px 10px;
+}
+
+.search-form {
+  position: relative;
+  margin: 0;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  height: 72px;
+  width: 100%;
+  max-width: 1140px;
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: 9px;
+}
+
+.search-form__input {
+  background-color: #F9F9F9;
+  border: none;
+  border-radius: 4px;
+  color: #A0A0A0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  width: 100%;
+  padding: 13px 0 13px 16px;
+}
+
+.search-form__error {
+  position: absolute;
+  bottom: 0;
+  left: 56px;
+  color: #EE3465;
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.search-form__response-error {
+  display: block;
+  height: 32px;
+  color: #EE3465;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+}
+
+.search-icon {
+  height: 10px;
+  width: 15px;
+}
+
+.search__button {
+  padding: 0;
+  background: no-repeat url("../../images/search-button.svg");
+  background-size: contain;
+  cursor: pointer;
+  min-width: 34px;
+  height: 34px;
+  border: none;
+}
+.search__button:hover {
+  opacity: .6;
+}
+
+.search__divider {
+  background: #E8E8E8;
+  min-width: 40px;
+  height: 1px;
+  transform: rotate(90deg);
+  border: none;
+}
+
+.search__divider-horizontal {
+  margin: 0;
+  position: absolute;
+  background: #E8E8E8;
+  width: 1140px;
+  height: 1px;
+  border: none;
+  bottom: 10px;
+}
+
+
+@media screen and (max-width: 1140px) {
+  .search {
+    padding: 70px 70px 80px;
+  }
+  .search__divider-horizontal {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .search__divider-horizontal {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+    padding: 80px 30px 120px;
+  }
+
+  .search__divider-horizontal {
+    width: 92%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .search {
+    position: relative;
+  }
+  .search-form__error {
+    left: 42px;
+  }
+  .search__divider {
+    display: none;
+  }
+  .search-icon {
+    display: none;
+  }
+  .search__divider-horizontal {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .search {
+    padding: 80px 10px 120px;
+  }
+  .search-form {
+    padding: 19px;
+    max-width: 300px;
+  }
+  .search-form__error {
+    left: 19px;
+  }
+  .search-form__input {
+    padding: 0;
+  }
+  .search__divider-horizontal {
+    width: 292px;
+  }
+}

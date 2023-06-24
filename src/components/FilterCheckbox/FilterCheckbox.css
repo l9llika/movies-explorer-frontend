@@ -28,10 +28,10 @@
 }
 
 .checkbox__label::after {
-  left: 6px;
-  top: 6px;
-  width: 8px;
-  height: 8px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
   background-color: #fff;
   border-radius: 50%;
   transition: left 1s, linear, 0.4s;
@@ -42,7 +42,7 @@
 }
 
 .checkbox__input_active+.checkbox__label::after {
-  left: 22px;
+  left: 18px;
 }
 
 .checkbox__label:hover::before {
